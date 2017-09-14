@@ -7,3 +7,4 @@ public
 !.gitkeep
 yarn-error.log
 .env
+yarn.lock

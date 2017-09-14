@@ -1,0 +1,11 @@
+<div id="gallery-01" class="gallery">
+  <div class="gallery__header"></div>
+  <div class="gallery__wrapper">
+    {{#each item}}
+    <div class="gallery__item {{#each this.tags}}{{#makeTag this }}{{/makeTag}} {{/each}}" id="{{@index}}">
+      <img src="{{!-- {{this.img}} --}} http://lorempixel.com/300/500/" alt="{{this.name}}" />
+      <h2>{{this.name}}</h2>
+    </div>
+    {{/each}}
+  </div>
+</div>

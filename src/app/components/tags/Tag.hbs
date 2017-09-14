@@ -1,0 +1,14 @@
+<div class="tags">
+  {{#if header}}
+  <div class="tags__header">
+  </div>
+  {{/if}}
+  <div class="tags__wrapper">
+    <div class="tags__item__first"><i class="material-icons">label_outline</i></div>
+    {{#each tags}}
+    <div class="tags__item active" id="{{@index}}">
+      <span>{{this}}</span>
+    </div>
+    {{/each}}
+  </div>
+</div>

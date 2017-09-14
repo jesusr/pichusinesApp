@@ -1,7 +1,7 @@
-import $ from 'jquery'
-import Backbone from 'backbone'
+import $ from 'jquery';
+import Backbone from 'backbone';
 
-import HomePage from 'app/components/home-page/HomePage'
+import HomePage from 'app/components/home-page/HomePage';
 
 export default Backbone.Router.extend({
   routes: {
@@ -9,9 +9,12 @@ export default Backbone.Router.extend({
   },
 
   home() {
-    const homePage = new HomePage().render()
+    const homePage = new HomePage({
+      gallery: true,
+      container: $('#root')
+    }).render();
 
-    $('#root').empty().append(homePage.$el)
-  }
-})
-
+    $('#root').empty().append(homePage.$el);
+  },
+  detail() {}
+});

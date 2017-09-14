@@ -25,7 +25,7 @@
     }
   },
   "rules": {
-    "semi": [2, "never"],
+    "semi": [2, "always"],
     "comma-dangle": 0,
     "max-len": 0,
     "no-shadow": 0,
@@ -41,6 +41,13 @@
     "import/no-dynamic-require": 0,
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
-    "no-unused-vars-rest/no-unused-vars": ["error", {"ignoreDestructuredVarsWithRest": true}]
+    "no-unused-vars-rest/no-unused-vars": ["error", {"ignoreDestructuredVarsWithRest": true}],
+    "no-use-before-define": ["error", { "functions": false, "classes": true }],
+    "no-underscore-dangle": 0,
+    "no-nested-ternary": 0,
+    "one-var": 0,
+    "no-plusplus": 0,
+    "no-cond-assign": 0,
+    "no-param-reassign": 0
   }
 }

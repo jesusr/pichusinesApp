@@ -1,5 +1,9 @@
 @import 'homepage.css';
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
 body {
   background-color: #FFF;
   font-family: 'Open Sans', sans-serif;

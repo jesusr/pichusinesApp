@@ -1,5 +1,5 @@
 :root {
-  --background-color: #EEEEEE;
+  --background-color: #fff;
 }
 
 .homepage {
@@ -7,15 +7,92 @@
 
   &__header {
     background-color: var(--background-color);
-    height: 150px;
-    padding: 20px;
-
+    height: auto;
+    padding: 20px 10px 7px 0;
+    box-shadow: 0px 33px 60px -53px rgba(0,0,0,.7);
+    display: block;
+    position: relative;
+    margin-bottom: 2em;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 30vw;
+      height: 30vw;
+      right: -15vw;
+      top: -15vw;
+      background-color: #E9F1FE;
+      transform: rotate(45deg); 
+    }
     >img {
-      width: 200px;
+      width: 250px;
+      margin-left: -30px;
     }
   }
 
   &__intro {
     font-size: large;
+  }
+
+  .gallery__header {
+    margin-bottom: 1em;
+    text-align: left;
+    padding: 0 1em;
+  }
+
+  div.tags {
+    top: -25px;
+    position: relative;
+  }
+
+  div.tags__item {
+    padding: 0.5em 1em;
+    display: inline-block;
+    background: #F6F6F6;
+    color: #52A0E8;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  div.tags__item.active {
+    background: #57A1E6;
+    color: #F6F6F6;
+    border: 1px solid #d3d3d3;
+  }
+
+  div.tags__item__first {
+    display: inline-block;
+    .material-icons {
+      font-size: 3em;
+      position: relative;
+      top: 19px;
+      color: #57A1E6;
+    }  
+  }
+
+  div.gallery__wrapper {
+    top: -20px;
+    position: relative;
+    .gallery__item {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      h2 {
+        text-align: left;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(100, 176, 233, 0.7);
+        padding: 0.5em 1em;
+      }
+      img {
+        font-size: 0;
+        display: block;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+    }
   }
 }
