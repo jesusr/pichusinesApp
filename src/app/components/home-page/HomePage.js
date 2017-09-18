@@ -26,7 +26,7 @@ export default View.extend({
     this.header = new Header(this.$el.find('.homepage__header__menu__icon'));
     return this;
   },
-  toggleMenu(e) {
+  toggleMenu() {
     this.$el.find('.homepage__header').toggleClass('lateral__menu__open');
     this.$el.find('.lateral-menu').toggleClass('active');
   },
