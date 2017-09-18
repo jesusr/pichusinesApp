@@ -1,9 +1,18 @@
-<div id="gallery-01" class="gallery">
+<div id="gallery" class="gallery">
   <div class="gallery__header"></div>
   <div class="gallery__wrapper">
     {{#each item}}
-    <div class="gallery__item {{#each this.tags}}{{#makeTag this }}{{/makeTag}} {{/each}}" id="{{@index}}">
+    <div class="gallery__item {{#each this.tags}}{{#makeTag this }}{{/makeTag}} {{/each}}" id="gallery-{{@index}}">
       <img src="{{!-- {{this.img}} --}} http://lorempixel.com/300/500/" alt="{{this.name}}" />
+      <div class="buttons">
+        <div class="image-icons">
+          <span class="more" data-url="{{@index}}"><i class="button__title">Ver más</i><i class="material-icons">add</i></span>
+          {{#if this.url}}
+          <span class="external-link"><i class="button__title">Comprar</i><i class="material-icons" data-url="{{this.url}}">shopping_cart</i></span>
+          {{/if}}
+          <span class="share"><i class="button__title">Compartir</i><i class="material-icons share-icon" id="product-{{@index}}">share</i></span>
+        </div>
+      </div>
       <h2>{{this.name}}</h2>
     </div>
     {{/each}}

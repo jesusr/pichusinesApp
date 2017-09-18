@@ -120,7 +120,6 @@ function getSelector(arr) {
   let selector = this.$el && this.$el.parent && this.$el.parent.id ? `#${this.$el.parent.id}` : '';
   selector += ` .${this.componentClass} `;
   selector += arr.join(' ');
-  console.log(selector);
   return selector;
 }
 

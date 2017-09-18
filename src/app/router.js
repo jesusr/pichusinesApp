@@ -12,7 +12,7 @@ export default Backbone.Router.extend({
     const homePage = new HomePage({
       gallery: true,
       container: $('#root')
-    }).render();
+    });
 
     $('#root').empty().append(homePage.$el);
   },
